@@ -10,10 +10,10 @@ try {
     if (output.length > maxBranchLength) {
         output = output.substring(0, maxBranchLength);
     }
-    core.setOutput("normalized", output);
     if (output.charAt(output.length - 1) == '-') {
         output = output.substring(0, output.length - 1);
     }
+    core.setOutput("normalized", output);
 } catch (err) {
     core.setFailed(err);
 }
